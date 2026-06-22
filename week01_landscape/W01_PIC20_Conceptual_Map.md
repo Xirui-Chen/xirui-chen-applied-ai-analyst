@@ -1,19 +1,13 @@
-# W01_PIC20_Conceptual_Map.md
+# PIC 2.0 Conceptual Map: Six Foundation-Model Components
 
-## PIC 2.0 Conceptual Map: Six Foundation-Model Components
-
-**Applied AI Analyst Intern, Week 1**  
-**Product Anchor:** Origami / PIC 2.0  
-**Intern:** Xirui (Crissy) Chen  
+**Product Anchor:** Origami / PIC 2.0   
 **Scope:** One-page conceptual map using public InGen materials plus open-literature equivalents
 
 ---
 
-## 1. Working Interpretation
+## 1. Interpretation
 
 InGen describes **Origami AI / PIC 2.0** as a physical intelligence platform: a shared, hardware-agnostic, edge-native, multimodal intelligence layer intended to power multiple robot and automation products rather than a single standalone device. Public InGen materials describe Origami AI as “the shared intelligence layer powering every InGen product,” with product links across Aido, Fari, Senpai, Sentinel, Carry & Go, Rover, and Humanoid. InGen also frames the platform as a single physical intelligence layer that compounds value across products, with modules spanning hardware, deep learning, software, and intelligence.
-
-For this one-page map, the six PIC 2.0 labels are interpreted as six complementary functions in a physical AI stack. Some labels are explicitly visible in public InGen product materials, especially **STUM**, **SEOM**, and **AMDC** in the Sentinel Prime AI page. Other labels, including **GRPO**, **HTD-IRL**, and **CRL-MRS**, are mapped to the closest open-literature concepts because public product pages do not provide full technical specifications for each component.
 
 ---
 
@@ -95,8 +89,6 @@ The key strategic idea is that PIC 2.0 should not be evaluated as a single model
 - AMDC: adaptive decision-making under multimodal uncertainty
 - HTD-IRL: long-horizon skill decomposition and reward inference
 - CRL-MRS: continual learning across robot fleets and environments
-
-For Week 1, this map creates the conceptual bridge from public InGen product language to later internship work: telemetry generation, anomaly detection, RL benchmarks, decision-model evaluation, and the final dashboard.
 
 ---
 
