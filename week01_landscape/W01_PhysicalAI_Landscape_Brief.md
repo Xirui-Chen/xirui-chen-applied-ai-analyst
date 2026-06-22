@@ -1,37 +1,11 @@
-# W01_PhysicalAI_Landscape_Brief.md
-
-## Physical AI Landscape Brief
-
-**Applied AI Analyst Intern, Week 1**  
+# Physical AI Landscape Brief
+ 
 **Product Anchor:** Origami / PIC 2.0, cross-portfolio orientation  
-**Intern:** Xirui (Crissy) Chen  
 **Scope:** Five anchor readings plus ecosystem map
 
 ---
 
-## 1. Executive Summary
-
-Physical AI is moving from a research-centered robotics field into a platform competition. The key change is not only better robot hardware. It is the emergence of foundation-model-style control systems that connect perception, language, planning, and action. The five readings reviewed here point to one central conclusion: the winning physical AI systems will not be single-purpose robots. They will be reusable intelligence layers that can operate across tasks, embodiments, environments, and customer workflows.
-
-This matters directly for InGen Dynamics because the Week 1 plan anchors the work on Origami / PIC 2.0 and asks for a physical AI landscape brief, a PIC 2.0 conceptual map, and environment setup as the first internship outputs. The same plan explicitly ties later weeks to Fari, Senpai, Sentinel Prime AI, Aido Rover, Aido Humanoid, and PIC 2.0, which means the landscape brief should not be a generic robotics summary. It should clarify how the embodied AI ecosystem is evolving around InGen's likely strategic needs: foundation models, hierarchical decision-making, sim-to-real reliability, telemetry, anomaly detection, and deployment evidence.
-
-Across the readings, five themes stand out:
-
-1. **VLA models are becoming the dominant interface between language and robot action.** OpenVLA shows that open-source vision-language-action models can be trained on diverse real-world robot demonstrations and fine-tuned for new tasks, reducing dependence on fully proprietary stacks.
-
-2. **Humanoid foundation models are splitting cognition into fast and slow systems.** Figure's Helix presents a two-system VLA architecture: a slower vision-language model for semantic understanding and a faster visuomotor policy for high-frequency upper-body control.
-
-3. **Hierarchical reinforcement learning remains conceptually essential but operationally hard.** HRL gives a language for temporal abstraction, reusable skills, options, and goal-conditioned control, but current methods still struggle with stable abstraction discovery, sample efficiency, and transfer across tasks.
-
-4. **The robotics market is large but uneven.** IFR World Robotics 2025 reports 542,076 industrial robots installed in 2024, the second-highest annual installation count in history, while service robotics remains more fragmented and application-specific.
-
-5. **Sim-to-real is still a deployment bottleneck.** The peer-reviewed sim-to-real survey by Salvato et al. frames the reality gap as the mismatch between simulated and real control performance, with domain randomization, adversarial RL, and transfer learning as major method families.
-
-The implication for InGen is clear: Origami / PIC 2.0 should be evaluated less as a model name and more as an operating architecture. The strongest physical AI companies are converging on reusable intelligence, modular embodiment, deployment telemetry, and evidence loops. InGen's product portfolio already maps naturally onto this structure: Fari and Senpai are human-facing interaction products, Sentinel Prime AI and Aido Rover are monitoring and autonomy products, and Aido Humanoid is the frontier embodiment. The strategic challenge is to turn this portfolio into a compounding system where each deployment improves the shared intelligence layer.
-
----
-
-## 2. Reading 1: OpenVLA and the Rise of Open Vision-Language-Action Models
+## 1. Reading 1: OpenVLA and the Rise of Open Vision-Language-Action Models
 
 **Reference:** *OpenVLA: An Open-Source Vision-Language-Action Model*  
 **Core question:** Can an open VLA model become a practical base policy for generalist robot manipulation?
@@ -52,7 +26,7 @@ The main limitation is that OpenVLA is still primarily a manipulation-centered m
 
 ---
 
-## 3. Reading 2: Figure Helix and Humanoid Foundation-Model Control
+## 2. Reading 2: Figure Helix and Humanoid Foundation-Model Control
 
 **Reference:** *Helix: A Vision-Language-Action Model for Generalist Humanoid Control*  
 **Core question:** What does a humanoid-oriented foundation model need beyond a standard VLA?
@@ -75,7 +49,7 @@ For InGen, the lesson is that Aido Humanoid should not be evaluated only as a ro
 
 ---
 
-## 4. Reading 3: Hierarchical Reinforcement Learning as the Missing Middle Layer
+## 3. Reading 3: Hierarchical Reinforcement Learning as the Missing Middle Layer
 
 **Reference:** *Hierarchical Reinforcement Learning: A Survey and Open Research Challenges*  
 **Core question:** Why does hierarchy matter for long-horizon physical AI?
@@ -96,7 +70,7 @@ The caution is that HRL is not a magic solution. The survey is clear that automa
 
 ---
 
-## 5. Reading 4: IFR World Robotics 2025 and the Market Reality Check
+## 4. Reading 4: IFR World Robotics 2025 and the Market Reality Check
 
 **Reference:** IFR *World Robotics 2025* executive summaries  
 **Core question:** Where is robotics adoption actually happening?
@@ -120,7 +94,7 @@ The market lesson is blunt: physical AI needs a wedge. The strongest initial wed
 
 ---
 
-## 6. Reading 5: Sim-to-Real Transfer and the Deployment Bottleneck
+## 5. Reading 5: Sim-to-Real Transfer and the Deployment Bottleneck
 
 **Reference:** *Crossing the Reality Gap: A Survey on Sim-to-Real Transferability of Robot Controllers in Reinforcement Learning*  
 **Core question:** Why do promising robot policies fail after deployment?
@@ -152,7 +126,7 @@ That ladder is the bridge from physical AI concept to credible customer deployme
 
 ---
 
-## 7. Cross-Reading Synthesis: What the Five Readings Say Together
+## 6. Cross-Reading Synthesis: 
 
 The readings describe a stack, not a single model.
 
@@ -172,7 +146,7 @@ The strongest strategic interpretation is:
 
 ---
 
-## 8. Ecosystem Map
+## 7. Ecosystem Map
 
 ```mermaid
 flowchart TD
@@ -231,31 +205,7 @@ flowchart TD
 
 ---
 
-## 9. Implications for InGen Dynamics
-
-### 9.1 Origami / PIC 2.0 should be framed as a platform, not a feature
-
-The strongest companies in the landscape are not only building better robot bodies. They are building reusable model and data systems. For InGen, Origami / PIC 2.0 should be described through platform evidence: what is shared across products, what is learned from deployments, what can be fine-tuned, and what can be monitored.
-
-### 9.2 Fari and Senpai need trust-centered evaluation
-
-Fari and Senpai are human-facing products, so success depends on interaction quality, safety, accessibility, and user trust. These products need evaluation harnesses that measure decision quality, conversational branching, escalation behavior, and reliability under ambiguity. This connects directly to the Week 6 AMDC-style decision-evaluation work.
-
-### 9.3 Sentinel Prime AI and Aido Rover are strong analytics anchors
-
-Security, patrol, inspection, and fleet health create measurable data streams. These are ideal for anomaly detection, telemetry dashboards, fault injection, and ROI-driven operational metrics. This makes Aido Rover and Sentinel Prime AI strong anchors for Weeks 3, 4, and 7.
-
-### 9.4 Aido Humanoid should be treated as a frontier learning platform
-
-Humanoids are strategically important, but they require the hardest stack: high-dimensional control, sim-to-real robustness, safety, teleoperation data, whole-body coordination, and long-horizon planning. The near-term analyst task is not to prove humanoid readiness. It is to define the evidence ladder needed for credible progress.
-
-### 9.5 The main strategic gap is not vision. It is validation
-
-The readings suggest that physical AI companies are increasingly good at vision, narrative, and demos. The harder differentiator is validation: benchmark quality, field telemetry, transparent failure modes, sim-to-real discipline, and customer-facing evidence. InGen's internship program is well designed around this gap because it moves from landscape research to synthetic telemetry, anomaly benchmarking, RL analysis, decision evaluation, and dashboarding.
-
----
-
-## 10. Final Takeaways
+## 8. Final Takeaways
 
 1. **The field is converging on VLA-style control, but VLA alone is not enough.** Robots need hierarchy, memory, safety, real-time control, and deployment monitoring.
 
@@ -271,7 +221,7 @@ The readings suggest that physical AI companies are increasingly good at vision,
 
 ---
 
-## References Consulted
+## References
 
 1. Kim et al., *OpenVLA: An Open-Source Vision-Language-Action Model*, arXiv, 2024.  
    https://arxiv.org/abs/2406.09246
