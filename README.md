@@ -20,7 +20,6 @@ All work in this repository is based on public information, open-source tooling,
 ## Repository Structure
 
 ```text
-.
 ├── README.md
 ├── requirements.txt
 ├── week01_landscape/
