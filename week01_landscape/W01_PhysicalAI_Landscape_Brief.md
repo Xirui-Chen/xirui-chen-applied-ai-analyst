@@ -1,3 +1,4 @@
+# Physical AI Landscape Brief
 
 **Product Anchor:** Origami / PIC 2.0, cross-portfolio orientation  
 **Scope:** Five anchor readings plus ecosystem map
