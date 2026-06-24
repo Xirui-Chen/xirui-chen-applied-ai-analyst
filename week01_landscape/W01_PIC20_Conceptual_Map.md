@@ -1,3 +1,5 @@
+# PIC 2.0 Conceptual Map: Six Foundation-Model Components
+
 **Product Anchor:** Origami / PIC 2.0   
 **Scope:** One-page conceptual map using public InGen materials plus open-literature equivalents
 
