@@ -1,4 +1,4 @@
-
+# Week 1 Recap: Physical AI Landscape and Toolchain Setup
 
 This week was mainly about getting oriented. Since physical AI is a new domain for me, I spent the first part of the week building a basic understanding of the field before moving into the more technical deliverables. I focused on how vision language action models, humanoid foundation models, hierarchical reinforcement learning, sim to real transfer, and robotics market trends fit together. The biggest shift in my understanding was that physical AI is not just about making robots more capable. It is really about building a reusable intelligence layer that can connect perception, language, planning, control, safety, and real deployment feedback.
 
