@@ -1,18 +1,12 @@
-# W02_Strategic_Gap_Memo.md
-
 # Strategic Gap Memo: Where InGen Can Differentiate in the Physical AI Competitor Field
 
-**Applied AI Analyst Intern, Week 2**  
-**Intern:** Xirui (Crissy) Chen  
-**Deliverable:** W02_Strategic_Gap_Memo.md  
-**Input:** W02_Competitive_Matrix.xlsx and public-source market research  
 **Scope:** Three differentiated InGen positions, each with a quantitative anchor and source citation
 
 ---
 
 ## Executive Summary
 
-The Week 2 competitor matrix shows a robotics market with strong technical momentum but clear strategic fragmentation. The best-funded humanoid players are concentrating capital around general-purpose labor, home help, and industrial material handling. Service-robot companies are usually more verticalized, with separate products for eldercare, child learning, special-needs education, delivery, cleaning, hospitality, or inspection. Security and patrol companies often compete either as autonomous robot hardware providers or as managed monitoring services.
+The Competitor Matrix shows a robotics market with strong technical momentum but clear strategic fragmentation. The best-funded humanoid players are concentrating capital around general-purpose labor, home help, and industrial material handling. Service-robot companies are usually more verticalized, with separate products for eldercare, child learning, special-needs education, delivery, cleaning, hospitality, or inspection. Security and patrol companies often compete either as autonomous robot hardware providers or as managed monitoring services.
 
 This creates three strategic gaps that InGen Dynamics is positioned to address through its public portfolio: Fari, Senpai, Sentinel Prime AI, Aido Rover, Aido Humanoid, and Origami / PIC 2.0.
 
@@ -149,12 +143,3 @@ For this positioning to be credible, the next internal and public-facing evidenc
 4. **Product-specific wedge:** Fari for eldercare, Senpai for AI education, Sentinel for security intelligence, Aido Rover for patrol and inspection, Aido Humanoid for long-term frontier embodiment.
 
 If executed carefully, InGen’s differentiated position is not simply breadth. It is breadth with a shared architecture and measurable validation.
-
----
-
-## Source Notes
-
-- This memo uses only public sources and the public vendor research summarized in `W02_Competitive_Matrix.xlsx`.
-- InGen-specific claims are based on public InGen pages and public press materials.
-- All market figures are cited directly to IFR, WHO, WEF, UNESCO, company websites, or public company / press sources.
-- No InGen confidential data, internal system access, customer data, or proprietary technical documents were used.
