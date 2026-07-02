@@ -1,4 +1,3 @@
-# Strategic Gap Memo: Where InGen Can Differentiate in the Physical AI Competitor Field
 
 **Scope:** Three differentiated InGen positions, each with a quantitative anchor and source citation
 
