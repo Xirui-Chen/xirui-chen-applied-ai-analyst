@@ -1,3 +1,4 @@
+# Week 2 Recap: Competitive Intelligence and Strategic Gap Analysis
 
 This week focused on understanding the competitive landscape around physical AI, humanoid robotics, service robots, and patrol or security robotics. Compared with Week 1, which was more about building conceptual grounding, Week 2 felt more applied. The main task was to move from reading about the field to comparing actual companies, products, funding signals, technical positioning, and market focus.
 
