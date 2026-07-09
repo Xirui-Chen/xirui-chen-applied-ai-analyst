@@ -351,7 +351,8 @@ The required feature categories are explicitly included:
 
 ## 6. Minimal Reproduction Code
 
-The exact feature code used to create these plots is expected to live in `W03_Telemetry_EDA.ipynb` or a follow-up feature-engineering notebook. The outline is:
+The exact feature code used to create these plots is in `W03_Telemetry_EDA.ipynb`. 
+The outline is:
 
 ```python
 import glob
