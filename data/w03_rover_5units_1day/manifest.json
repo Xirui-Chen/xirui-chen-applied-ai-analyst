@@ -1,0 +1,81 @@
+{
+  "config": {
+    "benign_noise_rate": 0.015,
+    "fleet_size": 5,
+    "float_format": "%.6f",
+    "force": false,
+    "freq_hz": 1.0,
+    "horizon_days": 1.0,
+    "missing_rate": 0.004,
+    "output_dir": "data/w03_rover_5units_1day",
+    "output_format": "csv.gz",
+    "partition": "robot_day",
+    "seed": 42,
+    "start_ts": "2026-07-01T00:00:00Z",
+    "write_manifest": true
+  },
+  "estimate": {
+    "fleet_size": 5,
+    "format": "csv.gz",
+    "freq_hz": 1.0,
+    "horizon_days": 1.0,
+    "output_dir": "data/w03_rover_5units_1day",
+    "partitions": 5,
+    "ticks_per_robot": 86400,
+    "total_rows": 432000
+  },
+  "note": "Synthetic data. No real InGen operational telemetry.",
+  "partitions": [
+    {
+      "day_index": 0,
+      "n_ticks": 86400,
+      "path": "robot_id=AR-001/day=000/telemetry.csv.gz",
+      "robot_id": "AR-001",
+      "robot_index": 0,
+      "rows": 86400,
+      "sha256": "f7f687642f81a813606fd6068e0602d1e1cc511c2c8d234e285a8dc28c0be2b7",
+      "start_tick": 0
+    },
+    {
+      "day_index": 0,
+      "n_ticks": 86400,
+      "path": "robot_id=AR-002/day=000/telemetry.csv.gz",
+      "robot_id": "AR-002",
+      "robot_index": 1,
+      "rows": 86400,
+      "sha256": "21c06e2e25098d9c9d3f7cb5064f4cfdb7707e99971f6fcac3698f06a347be16",
+      "start_tick": 0
+    },
+    {
+      "day_index": 0,
+      "n_ticks": 86400,
+      "path": "robot_id=AR-003/day=000/telemetry.csv.gz",
+      "robot_id": "AR-003",
+      "robot_index": 2,
+      "rows": 86400,
+      "sha256": "072da28a2ad5bdb20289cd18489708ae0349e8c008d2393eab877c191ec1b3c4",
+      "start_tick": 0
+    },
+    {
+      "day_index": 0,
+      "n_ticks": 86400,
+      "path": "robot_id=AR-004/day=000/telemetry.csv.gz",
+      "robot_id": "AR-004",
+      "robot_index": 3,
+      "rows": 86400,
+      "sha256": "dafd27db272fd561d79905a00c9671d205b14ad550c82affee44d1f29720a18d",
+      "start_tick": 0
+    },
+    {
+      "day_index": 0,
+      "n_ticks": 86400,
+      "path": "robot_id=AR-005/day=000/telemetry.csv.gz",
+      "robot_id": "AR-005",
+      "robot_index": 4,
+      "rows": 86400,
+      "sha256": "b7b55d46b32757f5942153720abcdeb8704ee4fd9609ad4ba4c235474c10c26b",
+      "start_tick": 0
+    }
+  ],
+  "schema_version": "w03_rover_telemetry_v1"
+}

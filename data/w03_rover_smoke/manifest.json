@@ -1,0 +1,51 @@
+{
+  "config": {
+    "benign_noise_rate": 0.015,
+    "fleet_size": 2,
+    "float_format": "%.6f",
+    "force": false,
+    "freq_hz": 1.0,
+    "horizon_days": 0.02,
+    "missing_rate": 0.004,
+    "output_dir": "data/w03_rover_smoke",
+    "output_format": "csv.gz",
+    "partition": "robot_day",
+    "seed": 42,
+    "start_ts": "2026-07-01T00:00:00Z",
+    "write_manifest": true
+  },
+  "estimate": {
+    "fleet_size": 2,
+    "format": "csv.gz",
+    "freq_hz": 1.0,
+    "horizon_days": 0.02,
+    "output_dir": "data/w03_rover_smoke",
+    "partitions": 2,
+    "ticks_per_robot": 1728,
+    "total_rows": 3456
+  },
+  "note": "Synthetic data. No real InGen operational telemetry.",
+  "partitions": [
+    {
+      "day_index": 0,
+      "n_ticks": 1728,
+      "path": "robot_id=AR-001/day=000/telemetry.csv.gz",
+      "robot_id": "AR-001",
+      "robot_index": 0,
+      "rows": 1728,
+      "sha256": "55fb9bbc066352a264a9ffaa6ac0d20985a7e795d05780f31d14378238ec080a",
+      "start_tick": 0
+    },
+    {
+      "day_index": 0,
+      "n_ticks": 1728,
+      "path": "robot_id=AR-002/day=000/telemetry.csv.gz",
+      "robot_id": "AR-002",
+      "robot_index": 1,
+      "rows": 1728,
+      "sha256": "b0822e3c7ae76cb8d442eeda0453b0013d19a8c6456f815b66ec20e001dca140",
+      "start_tick": 0
+    }
+  ],
+  "schema_version": "w03_rover_telemetry_v1"
+}
