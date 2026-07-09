@@ -2,7 +2,7 @@
 """
 W03_Telemetry_Generator.py
 
-Synthetic Aido Rover fleet telemetry generator for Week 3.
+Synthetic Aido Rover fleet telemetry generator.
 
 This script creates deterministic, partitioned 1 Hz telemetry for a synthetic
 Aido Rover patrol fleet. The default run supports 50 simulated Rover units over
@@ -19,15 +19,6 @@ Generated signals include:
     * discrete task-success flags
     * contextual fields for terrain, patrol mode, weather, location zone,
       benign measurement noise, and light missingness
-
-The distribution design is aligned with the Week 3 Aido Rover task:
-    * motor current includes terrain load, turning imbalance, and thermal drift
-    * battery SoC follows patrol and charging cycles
-    * WiFi RSSI includes location-specific multipath and short fades
-    * GPS fix quality degrades under multipath and weather
-    * benign sensor noise appears at a configurable 1 to 2 percent baseline
-
-All rows are synthetic. No real InGen operational telemetry is used.
 
 Example smoke test:
     python W03_Telemetry_Generator.py \
