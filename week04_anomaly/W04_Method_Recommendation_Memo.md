@@ -1,15 +1,8 @@
-# W04 Method Recommendation Memo
-
-**Deliverable:** `W04_Method_Recommendation_Memo.md`  
-**Prepared by:** Xirui (Crissy) Chen  
-**Input artifacts:** `W04_Anomaly_Benchmark.ipynb`, `w04_metrics_summary_mean_std.csv`, `w04_wilcoxon_auroc_pairwise.csv`, `w04_fault_injection_ledger.csv`  
-**Benchmark setting:** Week 3 synthetic Aido Rover telemetry, 5 units, 1 day, 1 Hz, with five controlled fault patterns injected only into held-out test blocks.
-
----
+# Method Recommendation Memo
 
 ## Recommendation
 
-For the current Week 4 benchmark, I would use **Local Outlier Factor (LOF)** as the preferred method when the operating goal is **accuracy-maximizing anomaly detection**, especially for offline review, fleet-health analytics, and analyst-facing triage. LOF achieved the strongest overall benchmark profile: **precision 0.492 ± 0.060, recall 0.970 ± 0.033, F1 0.651 ± 0.055, and AUROC 0.985 ± 0.008** across the 10 seeded splits. It also had the best AUROC for four of the five fault types: motor stall, gradual sensor drift, accelerated battery degradation, and GPS jitter. For intermittent software hang, One-Class SVM was essentially tied with LOF, with One-Class SVM at **0.996 ± 0.002 AUROC** and LOF at **0.996 ± 0.001 AUROC**.
+For Week 4 benchmark, I would use **Local Outlier Factor (LOF)** as the preferred method when the operating goal is **accuracy-maximizing anomaly detection**, especially for offline review, fleet-health analytics, and analyst-facing triage. LOF achieved the strongest overall benchmark profile: **precision 0.492 ± 0.060, recall 0.970 ± 0.033, F1 0.651 ± 0.055, and AUROC 0.985 ± 0.008** across the 10 seeded splits. It also had the best AUROC for four of the five fault types: motor stall, gradual sensor drift, accelerated battery degradation, and GPS jitter. For intermittent software hang, One-Class SVM was essentially tied with LOF, with One-Class SVM at **0.996 ± 0.002 AUROC** and LOF at **0.996 ± 0.001 AUROC**.
 
 For a **latency-constrained edge or near-real-time operating regime**, I would use **Isolation Forest** as the first-pass lightweight detector only if compute and memory budgets are strict. It is easier to deploy as a fast screening model because inference does not require the same neighbor-search behavior as LOF and does not require sequence reconstruction like the LSTM autoencoder. However, this recommendation has an important caveat: in the benchmark, Isolation Forest was clearly less accurate overall, with **0.844 ± 0.044 AUROC** and **0.365 ± 0.074 F1** across all faults. Its strongest performance was on motor stall, where it reached **0.965 ± 0.029 AUROC**, but it was materially weaker on accelerated battery degradation and GPS jitter. In a production-like Rover or Sentinel monitoring workflow, I would not rely on Isolation Forest alone. I would pair it with explicit rule-based guards for battery degradation, GPS consistency, stale telemetry, and task-success degradation.
 
