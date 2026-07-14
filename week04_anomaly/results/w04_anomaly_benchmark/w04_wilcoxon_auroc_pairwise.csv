@@ -1,0 +1,37 @@
+scope,method_a,method_b,mean_auroc_diff_a_minus_b,wilcoxon_statistic,p_value_two_sided,n_pairs
+accelerated_battery_degradation,Isolation Forest,LOF,-0.2183079628656805,0.0,0.001953125,10
+accelerated_battery_degradation,Isolation Forest,LSTM Autoencoder,0.19703294887455342,0.0,0.001953125,10
+accelerated_battery_degradation,Isolation Forest,One-Class SVM,-0.21557352357290044,0.0,0.001953125,10
+accelerated_battery_degradation,LOF,LSTM Autoencoder,0.415340911740234,0.0,0.001953125,10
+accelerated_battery_degradation,LOF,One-Class SVM,0.002734439292780111,1.0,0.00390625,10
+accelerated_battery_degradation,LSTM Autoencoder,One-Class SVM,-0.41260647244745385,0.0,0.001953125,10
+all_faults,Isolation Forest,LOF,-0.1411778448224499,0.0,0.001953125,10
+all_faults,Isolation Forest,LSTM Autoencoder,-0.003970891349018124,25.0,0.845703125,10
+all_faults,Isolation Forest,One-Class SVM,-0.137918375706347,0.0,0.001953125,10
+all_faults,LOF,LSTM Autoencoder,0.13720695347343176,0.0,0.001953125,10
+all_faults,LOF,One-Class SVM,0.00325946911610292,5.0,0.01953125,10
+all_faults,LSTM Autoencoder,One-Class SVM,-0.13394748435732887,0.0,0.001953125,10
+gps_jitter_spoofing,Isolation Forest,LOF,-0.20331145547730878,0.0,0.001953125,10
+gps_jitter_spoofing,Isolation Forest,LSTM Autoencoder,-0.10423070079044994,1.0,0.00390625,10
+gps_jitter_spoofing,Isolation Forest,One-Class SVM,-0.19390767472858933,0.0,0.001953125,10
+gps_jitter_spoofing,LOF,LSTM Autoencoder,0.09908075468685883,0.0,0.001953125,10
+gps_jitter_spoofing,LOF,One-Class SVM,0.009403780748719448,12.0,0.130859375,10
+gps_jitter_spoofing,LSTM Autoencoder,One-Class SVM,-0.08967697393813938,0.0,0.001953125,10
+gradual_sensor_drift,Isolation Forest,LOF,-0.12539645954526563,0.0,0.001953125,10
+gradual_sensor_drift,Isolation Forest,LSTM Autoencoder,-0.11114297044751509,0.0,0.001953125,10
+gradual_sensor_drift,Isolation Forest,One-Class SVM,-0.12417311076956997,0.0,0.001953125,10
+gradual_sensor_drift,LOF,LSTM Autoencoder,0.014253489097750528,1.0,0.00390625,10
+gradual_sensor_drift,LOF,One-Class SVM,0.0012233487756956429,9.0,0.064453125,10
+gradual_sensor_drift,LSTM Autoencoder,One-Class SVM,-0.013030140322054884,0.0,0.001953125,10
+intermittent_software_hang,Isolation Forest,LOF,-0.12623491898165662,0.0,0.001953125,10
+intermittent_software_hang,Isolation Forest,LSTM Autoencoder,-0.020116133170386165,16.0,0.275390625,10
+intermittent_software_hang,Isolation Forest,One-Class SVM,-0.1262892303192747,0.0,0.001953125,10
+intermittent_software_hang,LOF,LSTM Autoencoder,0.10611878581127043,0.0,0.001953125,10
+intermittent_software_hang,LOF,One-Class SVM,-5.4311337618095924e-05,17.0,0.322265625,10
+intermittent_software_hang,LSTM Autoencoder,One-Class SVM,-0.10617309714888853,0.0,0.001953125,10
+motor_stall,Isolation Forest,LOF,-0.03324386133445552,0.0,0.001953125,10
+motor_stall,Isolation Forest,LSTM Autoencoder,-0.021533026282784383,5.0,0.01953125,10
+motor_stall,Isolation Forest,One-Class SVM,-0.03184276366933825,0.0,0.001953125,10
+motor_stall,LOF,LSTM Autoencoder,0.011710835051671132,0.0,0.001953125,10
+motor_stall,LOF,One-Class SVM,0.001401097665117268,0.0,0.001953125,10
+motor_stall,LSTM Autoencoder,One-Class SVM,-0.010309737386553863,0.0,0.001953125,10
