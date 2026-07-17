@@ -1,4 +1,4 @@
-# Week 4 Recap: Anomaly Detection Benchmark and Mid-Point Review
+# Week 4 Recap: Anomaly Detection Benchmark
 
 This week focused on turning the Week 3 synthetic Rover telemetry work into a more complete anomaly-detection benchmark. In Week 3, the main goal was to generate and understand the telemetry dataset. This week, the goal shifted toward asking a more operational question: if a fleet-health system receives this kind of telemetry, which anomaly detection method is actually useful under different deployment constraints?
 
