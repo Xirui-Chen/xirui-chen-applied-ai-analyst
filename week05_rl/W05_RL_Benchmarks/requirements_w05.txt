@@ -1,0 +1,17 @@
+# Week 5 RL benchmark dependencies (Python 3.11 recommended)
+# Gymnasium's Box2D documentation requires SWIG before gymnasium[box2d].
+swig>=4.2,<5
+gymnasium[box2d]>=1.1,<2
+stable-baselines3>=2.7,<3
+torch>=2.3
+tensorboard>=2.16
+pettingzoo>=1.26,<2
+mpe2>=1.1,<2
+supersuit>=3.11,<4
+numpy>=1.26
+pandas>=2.2
+scipy>=1.12
+matplotlib>=3.8
+PyYAML>=6.0
+tqdm>=4.66
+rich>=13.7

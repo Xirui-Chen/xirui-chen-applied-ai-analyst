@@ -1,0 +1,117 @@
+project:
+  name: W05_RL_Benchmarks
+  seeds: [7, 17, 27, 37, 47]
+  device: auto
+  deterministic_evaluation: true
+
+profiles:
+  smoke:
+    single_agent:
+      LunarLanderContinuous-v3:
+        total_timesteps: 10000
+        eval_freq: 2500
+        eval_episodes: 3
+      BipedalWalker-v3:
+        total_timesteps: 10000
+        eval_freq: 2500
+        eval_episodes: 3
+    multi_agent:
+      total_timesteps: 20000
+      eval_freq: 5000
+      eval_episodes: 3
+  standard:
+    single_agent:
+      LunarLanderContinuous-v3:
+        total_timesteps: 150000
+        eval_freq: 10000
+        eval_episodes: 10
+      BipedalWalker-v3:
+        total_timesteps: 300000
+        eval_freq: 20000
+        eval_episodes: 10
+    multi_agent:
+      total_timesteps: 250000
+      eval_freq: 12500
+      eval_episodes: 10
+  extended:
+    single_agent:
+      LunarLanderContinuous-v3:
+        total_timesteps: 500000
+        eval_freq: 25000
+        eval_episodes: 20
+      BipedalWalker-v3:
+        total_timesteps: 1000000
+        eval_freq: 50000
+        eval_episodes: 20
+    multi_agent:
+      total_timesteps: 1000000
+      eval_freq: 50000
+      eval_episodes: 20
+
+single_agent:
+  environments:
+    LunarLanderContinuous-v3:
+      requested_id: LunarLanderContinuous-v3
+      fallback_id: LunarLander-v3
+      fallback_kwargs:
+        continuous: true
+      solved_reward: 200.0
+    BipedalWalker-v3:
+      requested_id: BipedalWalker-v3
+      fallback_id: null
+      fallback_kwargs: {}
+      solved_reward: 300.0
+
+  algorithms:
+    PPO:
+      policy: MlpPolicy
+      learning_rate: 0.0003
+      n_steps: 2048
+      batch_size: 64
+      n_epochs: 10
+      gamma: 0.99
+      gae_lambda: 0.95
+      clip_range: 0.2
+      ent_coef: 0.0
+      vf_coef: 0.5
+      max_grad_norm: 0.5
+      policy_kwargs:
+        net_arch: [128, 128]
+
+    SAC:
+      policy: MlpPolicy
+      learning_rate: 0.0003
+      buffer_size: 500000
+      learning_starts: 10000
+      batch_size: 256
+      tau: 0.005
+      gamma: 0.99
+      train_freq: 1
+      gradient_steps: 1
+      ent_coef: auto
+      policy_kwargs:
+        net_arch: [256, 256]
+
+multi_agent:
+  environment: simple_spread_v3
+  n_agents: 3
+  local_ratio: 0.5
+  max_cycles: 25
+  continuous_actions: true
+  vector_copies: 4
+  coordination_success_distance: 0.25
+  algorithm:
+    name: PPO
+    policy: MlpPolicy
+    learning_rate: 0.0003
+    n_steps: 1024
+    batch_size: 256
+    n_epochs: 10
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+    vf_coef: 0.5
+    max_grad_norm: 0.5
+    policy_kwargs:
+      net_arch: [128, 128]

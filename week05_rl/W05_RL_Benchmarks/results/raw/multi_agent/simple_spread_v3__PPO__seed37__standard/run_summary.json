@@ -1,0 +1,73 @@
+{
+  "algorithm": "PPO",
+  "best_mean_agent_return": -20.078756405373856,
+  "best_return_timestep": 100008,
+  "coordination_distance_reached": false,
+  "coordination_success_distance": 0.25,
+  "environment": "simple_spread_v3",
+  "environment_config": {
+    "continuous_actions": true,
+    "coordination_success_distance": 0.25,
+    "local_ratio": 0.5,
+    "max_cycles": 25,
+    "n_agents": 3,
+    "vector_copies": 4
+  },
+  "environment_source": "mpe2.simple_spread_v3",
+  "environment_steps_per_sec": 5065.632583192645,
+  "evaluation_episodes": 10,
+  "evaluation_frequency": 12500,
+  "final_collision_pairs_per_cycle": 0.016,
+  "final_coordination_success_rate": 0.0,
+  "final_mean_agent_return": -24.4878099657671,
+  "final_mean_assignment_distance": 0.8372370955797941,
+  "final_std_agent_return": 6.482784575874576,
+  "hyperparameters": {
+    "batch_size": 256,
+    "clip_range": 0.2,
+    "ent_coef": 0.01,
+    "gae_lambda": 0.95,
+    "gamma": 0.99,
+    "learning_rate": 0.0003,
+    "max_grad_norm": 0.5,
+    "n_epochs": 10,
+    "n_steps": 1024,
+    "name": "PPO",
+    "policy": "MlpPolicy",
+    "policy_kwargs": {
+      "net_arch": [
+        128,
+        128
+      ]
+    },
+    "vf_coef": 0.5
+  },
+  "n_agents": 3,
+  "normalized_learning_curve_auc": -22.45520369886897,
+  "profile": "standard",
+  "return_at_25pct_budget": -22.84271150870063,
+  "return_at_50pct_budget": -22.15530932191791,
+  "return_at_75pct_budget": -23.198729841412664,
+  "run_id": "simple_spread_v3__PPO__seed37__standard",
+  "seed": 37,
+  "software": {
+    "gymnasium": "1.3.0",
+    "machine": "arm64",
+    "mpe2": "1.1.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "pettingzoo": "1.26.1",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.11.5",
+    "stable_baselines3": "2.9.0",
+    "supersuit": "3.11.0",
+    "torch": "2.13.0"
+  },
+  "status": "completed",
+  "timesteps_to_coordination_distance": null,
+  "total_timesteps_actual": 258048,
+  "total_timesteps_requested": 250000,
+  "training_design": "parameter-sharing PPO via SuperSuit",
+  "vector_copies": 4,
+  "wallclock_sec": 50.940923125017434
+}

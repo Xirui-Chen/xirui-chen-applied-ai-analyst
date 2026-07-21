@@ -1,0 +1,59 @@
+{
+  "algorithm": "SAC",
+  "best_eval_mean_reward": 238.53308729999998,
+  "best_eval_timestep": 140000,
+  "deterministic_evaluation": true,
+  "environment_actual": "LunarLanderContinuous-v3",
+  "environment_requested": "LunarLanderContinuous-v3",
+  "environment_steps_per_sec": 307.48996562912515,
+  "evaluation_episodes": 10,
+  "evaluation_frequency": 10000,
+  "final_eval_mean_reward": 199.4229687,
+  "final_eval_std_reward": 81.82187390723364,
+  "hyperparameters": {
+    "batch_size": 256,
+    "buffer_size": 500000,
+    "ent_coef": "auto",
+    "gamma": 0.99,
+    "gradient_steps": 1,
+    "learning_rate": 0.0003,
+    "learning_starts": 10000,
+    "policy": "MlpPolicy",
+    "policy_kwargs": {
+      "net_arch": [
+        256,
+        256
+      ],
+      "use_sde": false
+    },
+    "tau": 0.005,
+    "train_freq": 1
+  },
+  "normalized_learning_curve_auc": 96.8181587,
+  "profile": "standard",
+  "reward_at_25pct_budget": -13.438651949999993,
+  "reward_at_50pct_budget": 110.87340069999999,
+  "reward_at_75pct_budget": 218.048517425,
+  "run_id": "LunarLanderContinuous-v3__SAC__seed47__standard",
+  "seed": 47,
+  "software": {
+    "gymnasium": "1.3.0",
+    "machine": "arm64",
+    "mpe2": "1.1.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "pettingzoo": "1.26.1",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.11.5",
+    "stable_baselines3": "2.9.0",
+    "supersuit": "3.11.0",
+    "torch": "2.13.0"
+  },
+  "solved_reward_threshold": 200.0,
+  "status": "completed",
+  "threshold_reached": true,
+  "timesteps_to_threshold": 110000,
+  "total_timesteps_actual": 150000,
+  "total_timesteps_requested": 150000,
+  "wallclock_sec": 487.8207966659975
+}

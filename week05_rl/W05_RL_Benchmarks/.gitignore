@@ -1,0 +1,6 @@
+.venv_w05/
+__pycache__/
+*.py[cod]
+.DS_Store
+models/**/*.zip
+models/**/*.pkl
