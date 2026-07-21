@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This folder contains the Week 5 reinforcement-learning experiment pipeline for the Applied AI Analyst internship. It runs:
+This folder contains the Week 5 reinforcement-learning experiment pipeline. It runs:
 
 - PPO and SAC on `LunarLanderContinuous-v3` and `BipedalWalker-v3`
 - five seeds for every environment-algorithm combination
@@ -41,6 +41,7 @@ This is parameter sharing with a single-agent PPO implementation. It is not inde
 W05_RL_Benchmarks/
 ├── README.md
 ├── requirements_w05.txt
+├── requirements_w05_lock.txt
 ├── configs/
 │   └── w05_rl_config.yaml
 ├── scripts/
@@ -50,7 +51,8 @@ W05_RL_Benchmarks/
 │   ├── train_multi_agent.py
 │   ├── aggregate_results.py
 │   ├── plot_learning_curves.py
-│   └── run_all.py
+│   ├── run_all.py
+│   └── evaluate_multi_agent_diagnostics.py
 ├── results/
 ├── tensorboard/
 ├── plots/
@@ -204,11 +206,3 @@ For Simple Spread, the benchmark uses a minimum-cost assignment between agent po
 - Every run stores configuration, software versions, machine metadata, and output paths.
 - No claim should be based on the smoke profile.
 - The standard profile is still a limited training budget. Failure to converge may reflect budget or hyperparameter limitations, not an inherent algorithm failure.
-
-## What to Commit
-
-Commit scripts, YAML configuration, README, seeded result CSVs, learning-curve PNGs, and TensorBoard logs if repository size remains reasonable. Usually do not commit `.venv_w05/`, saved model weights, or Python cache files.
-
-## AI Assistance Disclosure
-
-AI assistance was used to draft portions of the experiment scaffolding, documentation, and plotting utilities. The intern is responsible for running, validating, interpreting, and revising all experiments and claims.
