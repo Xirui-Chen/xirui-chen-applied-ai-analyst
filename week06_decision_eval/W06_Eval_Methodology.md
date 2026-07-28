@@ -1,8 +1,6 @@
-# W06 Eval Methodology
+# Evaluation Methodology
 
 **Project:** Week 6 Decision Evaluation Harness  
-**Deliverable:** W06_Eval_Methodology.md  
-**Author:** Xirui (Crissy) Chen, Applied AI Analyst Intern  
 **Scope:** 50-scenario decision test bank, rule baseline, seeded LLM judge, and reliability analysis  
 
 ## 1. Purpose and Evaluation Framing
