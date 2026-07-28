@@ -1,0 +1,39 @@
+schema_version: '1.0'
+id: rover_011
+domain: aido_rover
+task_type: priority_arbitration
+title: Communication loss with healthy local autonomy
+description: The network link is unavailable, but localization, route integrity, weather, and energy remain
+  healthy.
+inputs:
+  route_blocked: false
+  hazard_level: none
+  weather_severity: mild
+  comms_status: lost
+  localization_confidence: 0.96
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 74
+  energy_to_base_pct: 13
+  energy_to_finish_current_pct: 20
+  energy_to_priority_task_pct: 0
+  current_route_priority: normal
+  new_task_priority: none
+allowed_actions:
+- continue_current_route
+- return_to_base
+- safe_stop
+target_action: continue_current_route
+target_rationale: Communication loss alone does not require mission abandonment when local safety remains
+  reliable.
+metadata:
+  difficulty: boundary
+  risk_level: medium
+  tags:
+  - offline
+  - fail_operational
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

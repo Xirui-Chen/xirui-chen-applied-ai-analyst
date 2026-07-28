@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: senpai_007
+domain: senpai
+task_type: conversational_branching
+title: Visual explanation is not working
+description: The student is attentive but says the diagram is confusing and asks to hear an explanation.
+inputs:
+  send_profile: none
+  accessibility_barrier: false
+  modality_mismatch: true
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 2
+  consecutive_correct: 0
+  mastery_score: 0.49
+  frustration_score: 0.31
+  attention_score: 0.82
+  fatigue_score: 0.18
+allowed_actions:
+- provide_light_hint
+- simplify_content
+- switch_learning_modality
+target_action: switch_learning_modality
+target_rationale: The learner identifies a presentation mismatch rather than lower conceptual ability.
+metadata:
+  difficulty: basic
+  risk_level: low
+  tags:
+  - modality
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

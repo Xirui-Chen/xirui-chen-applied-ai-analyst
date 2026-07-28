@@ -1,0 +1,35 @@
+schema_version: '1.0'
+id: fari_003
+domain: fari
+task_type: conversational_branching
+title: Routine verified medication reminder
+description: A scheduled non-controlled medication is due and resident identity is verified.
+inputs:
+  fall_detected: false
+  resident_responsive: true
+  vital_severity: normal
+  vital_confidence: 0.94
+  medication_due: true
+  medication_already_taken: false
+  identity_verified: true
+  medication_refusal_count: 0
+  suspected_duplicate_dose: false
+  confusion_level: none
+  emotional_distress_level: none
+  self_harm_language: false
+  privacy_request: false
+  caregiver_available: true
+allowed_actions:
+- provide_medication_reminder
+- request_identity_verification
+- request_clinical_review
+target_action: provide_medication_reminder
+target_rationale: The scheduled reminder can proceed because identity and medication status are clear.
+metadata:
+  difficulty: basic
+  risk_level: medium
+  tags:
+  - medication
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

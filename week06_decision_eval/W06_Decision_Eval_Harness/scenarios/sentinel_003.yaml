@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_003
+domain: sentinel_prime
+task_type: mode_switching
+title: High-confidence intrusion with normal bandwidth
+description: Multiple sensors confirm a high-severity intrusion and the operator link is healthy.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 7000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: high
+  confidence: 0.93
+  uncertainty: 0.12
+  corroborating_sensor_count: 3
+allowed_actions:
+- send_compressed_evidence
+- escalate_to_operator
+- trigger_local_emergency
+target_action: escalate_to_operator
+target_rationale: The event is credible and serious but not yet an automatic local emergency.
+metadata:
+  difficulty: basic
+  risk_level: high
+  tags:
+  - operator
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

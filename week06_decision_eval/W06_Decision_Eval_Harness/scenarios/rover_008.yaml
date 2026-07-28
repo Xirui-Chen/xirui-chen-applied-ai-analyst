@@ -1,0 +1,37 @@
+schema_version: '1.0'
+id: rover_008
+domain: aido_rover
+task_type: priority_arbitration
+title: Priority request exceeds energy budget
+description: A high-priority inspection would leave insufficient energy for return.
+inputs:
+  route_blocked: false
+  hazard_level: moderate
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 38
+  energy_to_base_pct: 20
+  energy_to_finish_current_pct: 10
+  energy_to_priority_task_pct: 23
+  current_route_priority: low
+  new_task_priority: high
+allowed_actions:
+- continue_current_route
+- switch_to_priority_route
+- return_to_base
+target_action: return_to_base
+target_rationale: The requested task is not feasible while preserving a safe return reserve.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - priority
+  - infeasible
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

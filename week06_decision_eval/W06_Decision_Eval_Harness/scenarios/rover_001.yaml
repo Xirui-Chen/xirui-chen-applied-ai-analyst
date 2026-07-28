@@ -1,0 +1,37 @@
+schema_version: '1.0'
+id: rover_001
+domain: aido_rover
+task_type: priority_arbitration
+title: Routine patrol with ample energy
+description: The rover is halfway through a low-risk perimeter route and no competing incident is active.
+inputs:
+  route_blocked: false
+  hazard_level: none
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 78
+  energy_to_base_pct: 12
+  energy_to_finish_current_pct: 18
+  energy_to_priority_task_pct: 0
+  current_route_priority: normal
+  new_task_priority: none
+allowed_actions:
+- continue_current_route
+- return_to_base
+- hold_and_request_operator
+target_action: continue_current_route
+target_rationale: The current route is feasible with a large energy reserve and no higher-priority signal.
+metadata:
+  difficulty: basic
+  risk_level: low
+  tags:
+  - routine
+  - energy
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

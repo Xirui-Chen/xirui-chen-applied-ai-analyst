@@ -1,0 +1,38 @@
+schema_version: '1.0'
+id: fari_007
+domain: fari
+task_type: conversational_branching
+title: Low-confidence abnormal vital reading
+description: A single non-contact reading is moderately abnormal, but confidence is low and the resident
+  feels well.
+inputs:
+  fall_detected: false
+  resident_responsive: true
+  vital_severity: moderate
+  vital_confidence: 0.41
+  medication_due: false
+  medication_already_taken: false
+  identity_verified: true
+  medication_refusal_count: 0
+  suspected_duplicate_dose: false
+  confusion_level: none
+  emotional_distress_level: none
+  self_harm_language: false
+  privacy_request: false
+  caregiver_available: true
+allowed_actions:
+- suggest_rest_and_recheck
+- notify_caregiver
+- request_clinical_review
+target_action: suggest_rest_and_recheck
+target_rationale: A repeat observation is appropriate before escalating a low-confidence, non-symptomatic
+  signal.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - vitals
+  - uncertainty
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

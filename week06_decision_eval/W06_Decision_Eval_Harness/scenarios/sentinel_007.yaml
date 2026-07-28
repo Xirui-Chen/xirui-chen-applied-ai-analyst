@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: sentinel_007
+domain: sentinel_prime
+task_type: mode_switching
+title: Offline moderate alert with local storage
+description: A credible non-immediate event occurs during an outage and local storage is healthy.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: offline
+  bandwidth_kbps: 0
+  operator_channel_available: false
+  local_storage_free_pct: 68
+  privacy_zone: false
+  alert_severity: medium
+  confidence: 0.84
+  uncertainty: 0.22
+  corroborating_sensor_count: 2
+allowed_actions:
+- continue_local_monitoring
+- cache_evidence_and_monitor
+- trigger_local_emergency
+target_action: cache_evidence_and_monitor
+target_rationale: The edge system should retain evidence and remain operational until connectivity returns.
+metadata:
+  difficulty: boundary
+  risk_level: medium
+  tags:
+  - offline
+  - cache
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

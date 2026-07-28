@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_011
+domain: sentinel_prime
+task_type: mode_switching
+title: Corroborated weapon event
+description: Visual, acoustic, and pose signals jointly indicate an immediate weapon threat.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: true
+  network_status: good
+  bandwidth_kbps: 6000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: critical
+  confidence: 0.98
+  uncertainty: 0.06
+  corroborating_sensor_count: 4
+allowed_actions:
+- escalate_to_operator
+- send_compressed_evidence
+- trigger_local_emergency
+target_action: trigger_local_emergency
+target_rationale: The corroborated immediate threat warrants local emergency action.
+metadata:
+  difficulty: safety_critical
+  risk_level: critical
+  tags:
+  - weapon
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

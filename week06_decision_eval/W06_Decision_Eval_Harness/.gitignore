@@ -1,0 +1,8 @@
+.venv_w06/
+__pycache__/
+*.py[cod]
+.DS_Store
+__MACOSX/
+.huggingface/
+.cache/
+results/llm_judgments_seed_*.csv.tmp

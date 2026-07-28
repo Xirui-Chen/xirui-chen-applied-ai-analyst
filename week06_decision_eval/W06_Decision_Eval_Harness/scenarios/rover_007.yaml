@@ -1,0 +1,38 @@
+schema_version: '1.0'
+id: rover_007
+domain: aido_rover
+task_type: priority_arbitration
+title: Localization degradation during communication loss
+description: Localization is degraded and the operator link is unavailable, but a mapped safe checkpoint
+  is nearby.
+inputs:
+  route_blocked: false
+  hazard_level: moderate
+  weather_severity: mild
+  comms_status: lost
+  localization_confidence: 0.39
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 58
+  energy_to_base_pct: 18
+  energy_to_finish_current_pct: 20
+  energy_to_priority_task_pct: 0
+  current_route_priority: normal
+  new_task_priority: none
+allowed_actions:
+- continue_current_route
+- reroute_to_safe_checkpoint
+- safe_stop
+target_action: reroute_to_safe_checkpoint
+target_rationale: Moving only to the validated checkpoint is safer than continuing the full route.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - localization
+  - offline
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

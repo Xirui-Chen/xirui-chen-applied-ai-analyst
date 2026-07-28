@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: senpai_001
+domain: senpai
+task_type: conversational_branching
+title: One error with low frustration
+description: A student makes one arithmetic error but remains attentive and willing to try again.
+inputs:
+  send_profile: none
+  accessibility_barrier: false
+  modality_mismatch: false
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 1
+  consecutive_correct: 0
+  mastery_score: 0.54
+  frustration_score: 0.18
+  attention_score: 0.86
+  fatigue_score: 0.12
+allowed_actions:
+- continue_current_activity
+- provide_light_hint
+- provide_step_by_step_support
+target_action: provide_light_hint
+target_rationale: A small cue supports productive struggle without over-scaffolding.
+metadata:
+  difficulty: basic
+  risk_level: low
+  tags:
+  - hint
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

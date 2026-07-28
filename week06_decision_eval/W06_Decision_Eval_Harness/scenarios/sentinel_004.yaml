@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: sentinel_004
+domain: sentinel_prime
+task_type: mode_switching
+title: Immediate danger during complete outage
+description: A corroborated fire signal indicates immediate danger while all external links are down.
+inputs:
+  repeat_count_10min: 2
+  immediate_danger: true
+  network_status: offline
+  bandwidth_kbps: 0
+  operator_channel_available: false
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: critical
+  confidence: 0.97
+  uncertainty: 0.08
+  corroborating_sensor_count: 4
+allowed_actions:
+- cache_evidence_and_monitor
+- escalate_to_operator
+- trigger_local_emergency
+target_action: trigger_local_emergency
+target_rationale: Safety-critical local action must not wait for cloud confirmation.
+metadata:
+  difficulty: safety_critical
+  risk_level: critical
+  tags:
+  - offline
+  - fire
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

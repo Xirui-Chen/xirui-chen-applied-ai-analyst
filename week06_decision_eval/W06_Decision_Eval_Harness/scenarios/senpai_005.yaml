@@ -1,0 +1,35 @@
+schema_version: '1.0'
+id: senpai_005
+domain: senpai
+task_type: conversational_branching
+title: ADHD attention support
+description: A learner with an ADHD plan shows declining attention during a long explanation without high
+  frustration.
+inputs:
+  send_profile: adhd
+  accessibility_barrier: true
+  modality_mismatch: false
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 1
+  consecutive_correct: 1
+  mastery_score: 0.55
+  frustration_score: 0.28
+  attention_score: 0.29
+  fatigue_score: 0.36
+allowed_actions:
+- continue_current_activity
+- offer_short_break
+- activate_send_accommodation
+target_action: activate_send_accommodation
+target_rationale: The approved attention and pacing accommodation should be applied.
+metadata:
+  difficulty: boundary
+  risk_level: medium
+  tags:
+  - SEND
+  - ADHD
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

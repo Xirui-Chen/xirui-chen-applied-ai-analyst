@@ -1,0 +1,58 @@
+schema_version: '1.0'
+scenario_count: 50
+domain_counts:
+  aido_rover: 15
+  sentinel_prime: 15
+  senpai: 10
+  fari: 10
+files:
+- rover_001.yaml
+- rover_002.yaml
+- rover_003.yaml
+- rover_004.yaml
+- rover_005.yaml
+- rover_006.yaml
+- rover_007.yaml
+- rover_008.yaml
+- rover_009.yaml
+- rover_010.yaml
+- rover_011.yaml
+- rover_012.yaml
+- rover_013.yaml
+- rover_014.yaml
+- rover_015.yaml
+- sentinel_001.yaml
+- sentinel_002.yaml
+- sentinel_003.yaml
+- sentinel_004.yaml
+- sentinel_005.yaml
+- sentinel_006.yaml
+- sentinel_007.yaml
+- sentinel_008.yaml
+- sentinel_009.yaml
+- sentinel_010.yaml
+- sentinel_011.yaml
+- sentinel_012.yaml
+- sentinel_013.yaml
+- sentinel_014.yaml
+- sentinel_015.yaml
+- senpai_001.yaml
+- senpai_002.yaml
+- senpai_003.yaml
+- senpai_004.yaml
+- senpai_005.yaml
+- senpai_006.yaml
+- senpai_007.yaml
+- senpai_008.yaml
+- senpai_009.yaml
+- senpai_010.yaml
+- fari_001.yaml
+- fari_002.yaml
+- fari_003.yaml
+- fari_004.yaml
+- fari_005.yaml
+- fari_006.yaml
+- fari_007.yaml
+- fari_008.yaml
+- fari_009.yaml
+- fari_010.yaml

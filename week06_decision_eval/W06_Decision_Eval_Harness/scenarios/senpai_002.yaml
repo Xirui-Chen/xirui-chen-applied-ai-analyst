@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: senpai_002
+domain: senpai
+task_type: conversational_branching
+title: Repeated misconception
+description: A student repeats the same fraction error four times and asks how to start.
+inputs:
+  send_profile: none
+  accessibility_barrier: false
+  modality_mismatch: false
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 4
+  consecutive_correct: 0
+  mastery_score: 0.31
+  frustration_score: 0.52
+  attention_score: 0.72
+  fatigue_score: 0.24
+allowed_actions:
+- provide_light_hint
+- provide_step_by_step_support
+- simplify_content
+target_action: provide_step_by_step_support
+target_rationale: Repeated errors and an explicit request justify structured scaffolding.
+metadata:
+  difficulty: basic
+  risk_level: medium
+  tags:
+  - scaffolding
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

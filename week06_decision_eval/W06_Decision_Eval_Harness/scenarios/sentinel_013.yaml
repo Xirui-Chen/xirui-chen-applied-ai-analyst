@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_013
+domain: sentinel_prime
+task_type: mode_switching
+title: High severity with unresolved uncertainty
+description: A possible perimeter breach has high nominal severity but moderate confidence and weak corroboration.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 5000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: high
+  confidence: 0.68
+  uncertainty: 0.43
+  corroborating_sensor_count: 1
+allowed_actions:
+- request_sensor_recheck
+- escalate_to_operator
+- trigger_local_emergency
+target_action: request_sensor_recheck
+target_rationale: Severity should not override unresolved uncertainty when a recheck is available.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - uncertainty
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

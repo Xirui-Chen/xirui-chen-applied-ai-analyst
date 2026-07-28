@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: senpai_003
+domain: senpai
+task_type: conversational_branching
+title: Demonstrated mastery
+description: A student completes five difficult items correctly and reports that the task feels easy.
+inputs:
+  send_profile: none
+  accessibility_barrier: false
+  modality_mismatch: false
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 0
+  consecutive_correct: 5
+  mastery_score: 0.91
+  frustration_score: 0.08
+  attention_score: 0.88
+  fatigue_score: 0.16
+allowed_actions:
+- continue_current_activity
+- increase_difficulty
+- switch_learning_modality
+target_action: increase_difficulty
+target_rationale: The learner has shown mastery and is ready for greater challenge.
+metadata:
+  difficulty: basic
+  risk_level: low
+  tags:
+  - mastery
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

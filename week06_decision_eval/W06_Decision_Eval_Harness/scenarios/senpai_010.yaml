@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: senpai_010
+domain: senpai
+task_type: conversational_branching
+title: Ambiguous request for help
+description: The student asks to do it another way without identifying difficulty, modality, or fatigue.
+inputs:
+  send_profile: none
+  accessibility_barrier: false
+  modality_mismatch: false
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.87
+  consecutive_errors: 1
+  consecutive_correct: 1
+  mastery_score: 0.57
+  frustration_score: 0.34
+  attention_score: 0.76
+  fatigue_score: 0.26
+allowed_actions:
+- provide_light_hint
+- switch_learning_modality
+- ask_clarifying_question
+target_action: ask_clarifying_question
+target_rationale: A neutral clarification should precede intervention.
+metadata:
+  difficulty: boundary
+  risk_level: low
+  tags:
+  - ambiguity
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

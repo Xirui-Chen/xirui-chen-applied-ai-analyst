@@ -1,0 +1,11 @@
+PyYAML>=6.0,<7
+jsonschema>=4.22,<5
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+torch>=2.3
+transformers>=4.46,<6
+sentencepiece>=0.2
+safetensors>=0.4
+tqdm>=4.66
+tabulate>=0.9

@@ -1,0 +1,36 @@
+schema_version: '1.0'
+id: rover_003
+domain: aido_rover
+task_type: priority_arbitration
+title: Critical energy reserve
+description: The battery is close to the estimated return requirement and no emergency task is active.
+inputs:
+  route_blocked: false
+  hazard_level: none
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 19
+  energy_to_base_pct: 12
+  energy_to_finish_current_pct: 14
+  energy_to_priority_task_pct: 0
+  current_route_priority: normal
+  new_task_priority: none
+allowed_actions:
+- continue_current_route
+- return_to_base
+- hold_and_request_operator
+target_action: return_to_base
+target_rationale: Mission continuation would consume the reserve required for a safe return.
+metadata:
+  difficulty: basic
+  risk_level: high
+  tags:
+  - low_battery
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

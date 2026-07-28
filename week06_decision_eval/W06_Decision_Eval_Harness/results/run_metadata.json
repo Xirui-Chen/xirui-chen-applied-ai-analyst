@@ -1,0 +1,17 @@
+{
+  "authoritative_score": "exact match against target_action",
+  "device": "cpu",
+  "judge_seeds": [
+    7,
+    17,
+    27
+  ],
+  "machine": "arm64",
+  "model_name": "google/flan-t5-base",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.11.5",
+  "scenario_count": 50,
+  "secondary_score": "seeded small-model LLM rubric",
+  "torch": "2.13.0",
+  "transformers": "5.14.1"
+}

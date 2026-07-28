@@ -1,0 +1,39 @@
+schema_version: '1.0'
+id: rover_014
+domain: aido_rover
+task_type: priority_arbitration
+title: Distant critical alert with no return reserve
+description: A critical incident is reported, but this rover cannot reach it and preserve a safe return
+  reserve.
+inputs:
+  route_blocked: false
+  hazard_level: severe
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: true
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 31
+  energy_to_base_pct: 19
+  energy_to_finish_current_pct: 11
+  energy_to_priority_task_pct: 21
+  current_route_priority: normal
+  new_task_priority: critical
+allowed_actions:
+- switch_to_priority_route
+- return_to_base
+- hold_and_request_operator
+target_action: hold_and_request_operator
+target_rationale: The event requires human fleet reassignment because this rover cannot safely complete
+  the response.
+metadata:
+  difficulty: safety_critical
+  risk_level: critical
+  tags:
+  - human_safety
+  - operator
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

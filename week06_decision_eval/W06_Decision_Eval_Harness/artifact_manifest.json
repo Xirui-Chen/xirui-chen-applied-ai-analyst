@@ -1,0 +1,27 @@
+{
+  "scenario_count": 50,
+  "domain_counts": {
+    "aido_rover": 15,
+    "fari": 10,
+    "senpai": 10,
+    "sentinel_prime": 15
+  },
+  "rule_baseline_accuracy": 0.86,
+  "rule_baseline_mismatches": [
+    "fari_006",
+    "fari_007",
+    "rover_008",
+    "rover_010",
+    "rover_014",
+    "sentinel_008",
+    "sentinel_015"
+  ],
+  "llm_model_configured": "google/flan-t5-base",
+  "llm_results_generated": true,
+  "judge_protocol": "pure_seeded_llm_strict_single_label",
+  "judge_run_count": 150,
+  "judge_seed_count": 3,
+  "judge_parse_rate": 1.0,
+  "judge_overall_krippendorff_alpha": 0.7250461331991276,
+  "judge_exact_three_run_agreement": 0.78
+}

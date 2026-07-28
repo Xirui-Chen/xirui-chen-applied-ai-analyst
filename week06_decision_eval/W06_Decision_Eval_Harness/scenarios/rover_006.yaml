@@ -1,0 +1,37 @@
+schema_version: '1.0'
+id: rover_006
+domain: aido_rover
+task_type: priority_arbitration
+title: Low localization confidence with operator link
+description: Localization confidence drops in a repetitive corridor while communications remain available.
+inputs:
+  route_blocked: false
+  hazard_level: moderate
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.34
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 61
+  energy_to_base_pct: 16
+  energy_to_finish_current_pct: 18
+  energy_to_priority_task_pct: 0
+  current_route_priority: normal
+  new_task_priority: none
+allowed_actions:
+- continue_current_route
+- hold_and_request_operator
+- reroute_to_safe_checkpoint
+target_action: hold_and_request_operator
+target_rationale: The robot should not continue uncertain motion when a human operator is reachable.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - localization
+  - operator
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

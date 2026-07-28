@@ -1,0 +1,5 @@
+domain,scenario_count,rule_exact_accuracy,fallback_rate,judge_mean_score
+aido_rover,15,0.8,0.0,0.711111111111111
+fari,10,0.8,0.0,1.3666666666666667
+senpai,10,1.0,0.0,1.5
+sentinel_prime,15,0.8666666666666667,0.06666666666666667,0.9111111111111111

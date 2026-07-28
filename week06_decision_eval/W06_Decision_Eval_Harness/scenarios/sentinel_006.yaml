@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: sentinel_006
+domain: sentinel_prime
+task_type: mode_switching
+title: Medium alert with compact-clip bandwidth
+description: The degraded network can carry a compressed evidence clip for operator review.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: degraded
+  bandwidth_kbps: 420
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: medium
+  confidence: 0.82
+  uncertainty: 0.24
+  corroborating_sensor_count: 2
+allowed_actions:
+- send_metadata_only
+- send_compressed_evidence
+- continue_local_monitoring
+target_action: send_compressed_evidence
+target_rationale: The link supports a compact evidence package without dropping the event.
+metadata:
+  difficulty: boundary
+  risk_level: medium
+  tags:
+  - bandwidth
+  - evidence
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

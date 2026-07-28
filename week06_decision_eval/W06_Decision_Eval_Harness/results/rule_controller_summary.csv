@@ -1,0 +1,5 @@
+domain,scenario_count,exact_match_accuracy,fallback_rate
+aido_rover,15,0.8,0.0
+fari,10,0.8,0.0
+senpai,10,1.0,0.0
+sentinel_prime,15,0.8666666666666667,0.06666666666666667

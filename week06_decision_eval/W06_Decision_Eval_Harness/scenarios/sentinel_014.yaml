@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_014
+domain: sentinel_prime
+task_type: mode_switching
+title: Operator channel unavailable on a healthy link
+description: A credible high-severity event occurs while the operator-review service is unavailable.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 5500
+  operator_channel_available: false
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: high
+  confidence: 0.92
+  uncertainty: 0.13
+  corroborating_sensor_count: 3
+allowed_actions:
+- send_compressed_evidence
+- cache_evidence_and_monitor
+- trigger_local_emergency
+target_action: send_compressed_evidence
+target_rationale: Evidence should be forwarded without pretending that operator review occurred.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - operator_unavailable
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

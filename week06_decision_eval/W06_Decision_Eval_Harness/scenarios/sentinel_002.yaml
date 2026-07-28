@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: sentinel_002
+domain: sentinel_prime
+task_type: mode_switching
+title: Ambiguous detection needs another sensor pass
+description: A medium-confidence event could be a person or moving equipment and a thermal recheck is
+  available.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 5000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: medium
+  confidence: 0.61
+  uncertainty: 0.46
+  corroborating_sensor_count: 1
+allowed_actions:
+- continue_local_monitoring
+- request_sensor_recheck
+- escalate_to_operator
+target_action: request_sensor_recheck
+target_rationale: A corroborating pass can reduce uncertainty before escalation.
+metadata:
+  difficulty: basic
+  risk_level: medium
+  tags:
+  - recheck
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

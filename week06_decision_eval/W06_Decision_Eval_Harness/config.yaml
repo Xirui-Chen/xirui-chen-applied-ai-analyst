@@ -1,0 +1,38 @@
+project:
+  name: W06_Decision_Eval_Harness
+  contract_version: '1.0'
+  expected_scenario_count: 50
+  expected_domain_counts:
+    aido_rover: 15
+    sentinel_prime: 15
+    senpai: 10
+    fari: 10
+judge:
+  model_name: google/flan-t5-base
+  seeds:
+  - 7
+  - 17
+  - 27
+  device: auto
+  max_input_tokens: 512
+  max_new_tokens: 4
+  do_sample: true
+  temperature: 0.3
+  top_p: 0.8
+scoring:
+  verdicts:
+  - PASS
+  - PARTIAL
+  - FAIL
+  verdict_scores:
+    PASS: 2
+    PARTIAL: 1
+    FAIL: 0
+  exact_match_is_authoritative: true
+rule_controller:
+  return_reserve_pct: 10
+  low_localization_threshold: 0.45
+  sentinel_low_confidence: 0.45
+  sentinel_medium_confidence: 0.7
+  very_low_bandwidth_kbps: 100
+  compressed_evidence_bandwidth_kbps: 600

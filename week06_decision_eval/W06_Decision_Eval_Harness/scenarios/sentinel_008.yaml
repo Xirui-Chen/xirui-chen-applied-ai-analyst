@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_008
+domain: sentinel_prime
+task_type: mode_switching
+title: Repeated medium alerts indicate persistence
+description: Three consistent medium-severity detections occur in the same zone within ten minutes.
+inputs:
+  repeat_count_10min: 3
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 6000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: medium
+  confidence: 0.79
+  uncertainty: 0.21
+  corroborating_sensor_count: 2
+allowed_actions:
+- continue_local_monitoring
+- request_sensor_recheck
+- escalate_to_operator
+target_action: escalate_to_operator
+target_rationale: Repeated consistent observations increase operational significance.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - repeat_alert
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

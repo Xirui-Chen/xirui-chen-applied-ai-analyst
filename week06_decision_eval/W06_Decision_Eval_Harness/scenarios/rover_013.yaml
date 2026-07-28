@@ -1,0 +1,36 @@
+schema_version: '1.0'
+id: rover_013
+domain: aido_rover
+task_type: priority_arbitration
+title: Nearby immediate human-safety incident
+description: A confirmed person-down alert is nearby and the rover has enough energy to inspect and return.
+inputs:
+  route_blocked: false
+  hazard_level: severe
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: true
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 62
+  energy_to_base_pct: 16
+  energy_to_finish_current_pct: 17
+  energy_to_priority_task_pct: 18
+  current_route_priority: normal
+  new_task_priority: critical
+allowed_actions:
+- continue_current_route
+- switch_to_priority_route
+- return_to_base
+target_action: switch_to_priority_route
+target_rationale: The immediate human-safety event outranks the routine route and is energy-feasible.
+metadata:
+  difficulty: safety_critical
+  risk_level: critical
+  tags:
+  - human_safety
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

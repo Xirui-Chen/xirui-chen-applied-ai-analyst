@@ -1,0 +1,37 @@
+schema_version: '1.0'
+id: rover_010
+domain: aido_rover
+task_type: priority_arbitration
+title: Sensitive payload near a service checkpoint
+description: Battery is marginal for base, but a nearby service checkpoint can protect the sensitive payload.
+inputs:
+  route_blocked: false
+  hazard_level: moderate
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: true
+  safe_checkpoint_energy_pct: 6
+  battery_soc_pct: 27
+  energy_to_base_pct: 21
+  energy_to_finish_current_pct: 14
+  energy_to_priority_task_pct: 0
+  current_route_priority: normal
+  new_task_priority: none
+allowed_actions:
+- return_to_base
+- reroute_to_safe_checkpoint
+- hold_and_request_operator
+target_action: reroute_to_safe_checkpoint
+target_rationale: The nearby checkpoint preserves the payload without consuming the marginal base reserve.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - payload
+  - checkpoint
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

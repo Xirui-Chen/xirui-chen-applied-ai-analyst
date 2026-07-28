@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_001
+domain: sentinel_prime
+task_type: mode_switching
+title: Low-confidence isolated detection
+description: One visual model reports a low-severity object with weak confidence and no corroboration.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 5000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: low
+  confidence: 0.38
+  uncertainty: 0.71
+  corroborating_sensor_count: 0
+allowed_actions:
+- continue_local_monitoring
+- request_sensor_recheck
+- suppress_and_log
+target_action: suppress_and_log
+target_rationale: The signal is too uncertain to create an alert but should remain auditable.
+metadata:
+  difficulty: basic
+  risk_level: low
+  tags:
+  - uncertainty
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

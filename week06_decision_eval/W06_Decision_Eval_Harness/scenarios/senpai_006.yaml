@@ -1,0 +1,34 @@
+schema_version: '1.0'
+id: senpai_006
+domain: senpai
+task_type: conversational_branching
+title: High frustration and fatigue
+description: A student says they cannot focus and shows high frustration after working continuously.
+inputs:
+  send_profile: none
+  accessibility_barrier: false
+  modality_mismatch: false
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 3
+  consecutive_correct: 0
+  mastery_score: 0.4
+  frustration_score: 0.88
+  attention_score: 0.32
+  fatigue_score: 0.84
+allowed_actions:
+- provide_step_by_step_support
+- simplify_content
+- offer_short_break
+target_action: offer_short_break
+target_rationale: Continuing instruction under high frustration and fatigue is unlikely to be productive.
+metadata:
+  difficulty: boundary
+  risk_level: medium
+  tags:
+  - frustration
+  - fatigue
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

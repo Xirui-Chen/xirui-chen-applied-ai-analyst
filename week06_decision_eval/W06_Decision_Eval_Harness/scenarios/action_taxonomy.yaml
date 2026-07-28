@@ -1,0 +1,45 @@
+schema_version: '1.0'
+note: Action labels are analyst-defined synthetic evaluation contracts, not asserted
+  production commands.
+domains:
+  aido_rover:
+    continue_current_route: Continue the current patrol assignment.
+    switch_to_priority_route: Switch to the higher-priority route or incident.
+    return_to_base: Return directly to the charging or service base.
+    reroute_to_safe_checkpoint: Move to the nearest validated safe checkpoint.
+    hold_and_request_operator: Hold safely and request human guidance.
+    safe_stop: Enter a stationary fail-safe state.
+  sentinel_prime:
+    continue_local_monitoring: Continue edge monitoring without higher-tier alerting.
+    request_sensor_recheck: Collect another observation or corroborating sensor pass.
+    suppress_and_log: Suppress operational escalation while retaining an audit record.
+    send_metadata_only: Transmit essential alert metadata before richer evidence.
+    send_compressed_evidence: Transmit a reduced-size evidence package.
+    cache_evidence_and_monitor: Retain evidence locally and continue fail-operational
+      monitoring.
+    escalate_to_operator: Create an operator-review incident.
+    trigger_local_emergency: Activate the local emergency protocol without cloud confirmation.
+  senpai:
+    continue_current_activity: Continue the current learning activity.
+    provide_light_hint: Give a small cue without revealing the solution.
+    provide_step_by_step_support: Break the task into explicit steps.
+    simplify_content: Reduce language or conceptual complexity.
+    increase_difficulty: Move to a more challenging task.
+    switch_learning_modality: Change visual, verbal, tactile, or interactive presentation.
+    offer_short_break: Pause briefly to reduce fatigue or frustration.
+    activate_send_accommodation: Apply the relevant accessibility or SEND support.
+    ask_clarifying_question: Ask a neutral question before choosing an intervention.
+    request_teacher_support: Hand the decision to an authorized teacher.
+    pause_and_safeguard: Stop the lesson and activate safeguarding.
+  fari:
+    continue_supportive_conversation: Continue calm, non-clinical companionship.
+    offer_reorientation: Provide gentle time, place, or routine orientation.
+    provide_medication_reminder: Give the scheduled reminder without changing medication.
+    request_identity_verification: Verify resident or caregiver identity.
+    suggest_rest_and_recheck: Rest and repeat a low-confidence observation.
+    respect_refusal_and_monitor: Respect informed refusal while documenting and monitoring.
+    notify_caregiver: Notify the assigned caregiver.
+    request_clinical_review: Request authorized clinical or medication review.
+    initiate_emergency_escalation: Trigger the emergency response pathway.
+    pause_sensitive_data_collection: Stop optional sensitive sensing or sharing until
+      consent is restored.

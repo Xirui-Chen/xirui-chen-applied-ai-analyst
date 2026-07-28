@@ -1,0 +1,82 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: W06 Decision Evaluation Scenario
+type: object
+additionalProperties: false
+required:
+- schema_version
+- id
+- domain
+- task_type
+- title
+- description
+- inputs
+- allowed_actions
+- target_action
+- target_rationale
+- metadata
+properties:
+  schema_version:
+    const: '1.0'
+  id:
+    type: string
+    pattern: ^(rover|sentinel|senpai|fari)_[0-9]{3}$
+  domain:
+    enum:
+    - aido_rover
+    - sentinel_prime
+    - senpai
+    - fari
+  task_type:
+    enum:
+    - priority_arbitration
+    - mode_switching
+    - conversational_branching
+  title:
+    type: string
+    minLength: 5
+  description:
+    type: string
+    minLength: 20
+  inputs:
+    type: object
+    minProperties: 3
+  allowed_actions:
+    type: array
+    minItems: 2
+    uniqueItems: true
+    items:
+      type: string
+  target_action:
+    type: string
+  target_rationale:
+    type: string
+    minLength: 20
+  metadata:
+    type: object
+    additionalProperties: false
+    required:
+    - difficulty
+    - risk_level
+    - tags
+    - public_safe
+    - source_basis
+    properties:
+      difficulty:
+        enum:
+        - basic
+        - boundary
+        - safety_critical
+      risk_level:
+        enum:
+        - low
+        - medium
+        - high
+        - critical
+      tags:
+        type: array
+        items:
+          type: string
+      public_safe:
+        const: true
+      source_basis:
+        type: string

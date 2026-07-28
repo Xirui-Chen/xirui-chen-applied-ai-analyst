@@ -1,0 +1,36 @@
+schema_version: '1.0'
+id: rover_009
+domain: aido_rover
+task_type: priority_arbitration
+title: Do not abandon an active higher-priority route
+description: The rover is already responding to a high-priority alert when a medium-priority request arrives.
+inputs:
+  route_blocked: false
+  hazard_level: moderate
+  weather_severity: mild
+  comms_status: good
+  localization_confidence: 0.95
+  actuator_fault: false
+  immediate_human_safety_event: false
+  payload_sensitive: false
+  safe_checkpoint_energy_pct: 8
+  battery_soc_pct: 69
+  energy_to_base_pct: 17
+  energy_to_finish_current_pct: 22
+  energy_to_priority_task_pct: 18
+  current_route_priority: high
+  new_task_priority: medium
+allowed_actions:
+- continue_current_route
+- switch_to_priority_route
+- hold_and_request_operator
+target_action: continue_current_route
+target_rationale: The active route remains the higher-priority feasible commitment.
+metadata:
+  difficulty: basic
+  risk_level: medium
+  tags:
+  - priority_order
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

@@ -1,0 +1,36 @@
+schema_version: '1.0'
+id: senpai_004
+domain: senpai
+task_type: conversational_branching
+title: Dyslexia-related reading barrier
+description: A learner understands verbally but struggles with dense on-screen text under an accommodation
+  plan.
+inputs:
+  send_profile: dyslexia
+  accessibility_barrier: true
+  modality_mismatch: true
+  safeguarding_flag: false
+  teacher_override: false
+  intent_ambiguity: 0.1
+  consecutive_errors: 2
+  consecutive_correct: 1
+  mastery_score: 0.58
+  frustration_score: 0.61
+  attention_score: 0.74
+  fatigue_score: 0.2
+allowed_actions:
+- simplify_content
+- switch_learning_modality
+- activate_send_accommodation
+- offer_short_break
+target_action: activate_send_accommodation
+target_rationale: The identified accessibility barrier should trigger the approved accommodation.
+metadata:
+  difficulty: boundary
+  risk_level: medium
+  tags:
+  - SEND
+  - dyslexia
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

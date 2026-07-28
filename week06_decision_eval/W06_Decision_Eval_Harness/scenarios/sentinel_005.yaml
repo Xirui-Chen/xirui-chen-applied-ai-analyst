@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_005
+domain: sentinel_prime
+task_type: mode_switching
+title: High-severity alert on a very narrow link
+description: A credible high-severity incident must be communicated over an extremely constrained connection.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: degraded
+  bandwidth_kbps: 55
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: high
+  confidence: 0.91
+  uncertainty: 0.15
+  corroborating_sensor_count: 3
+allowed_actions:
+- send_metadata_only
+- send_compressed_evidence
+- cache_evidence_and_monitor
+target_action: send_metadata_only
+target_rationale: Essential severity, location, confidence, and event identifiers should be sent first.
+metadata:
+  difficulty: boundary
+  risk_level: high
+  tags:
+  - bandwidth
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.

@@ -1,0 +1,32 @@
+schema_version: '1.0'
+id: sentinel_012
+domain: sentinel_prime
+task_type: mode_switching
+title: Routine authorized loading activity
+description: A delivery vehicle is detected in an authorized loading area during operating hours.
+inputs:
+  repeat_count_10min: 1
+  immediate_danger: false
+  network_status: good
+  bandwidth_kbps: 7000
+  operator_channel_available: true
+  local_storage_free_pct: 75
+  privacy_zone: false
+  alert_severity: low
+  confidence: 0.94
+  uncertainty: 0.1
+  corroborating_sensor_count: 2
+allowed_actions:
+- continue_local_monitoring
+- suppress_and_log
+- escalate_to_operator
+target_action: continue_local_monitoring
+target_rationale: The activity is expected, authorized, and non-threatening.
+metadata:
+  difficulty: basic
+  risk_level: low
+  tags:
+  - routine
+  public_safe: true
+  source_basis: Synthetic, publication-safe analyst scenario derived from product-level reference themes.
+    No proprietary operational threshold is reproduced.
