@@ -1,0 +1,169 @@
+{
+  "schema_version": "w07_dashboard_data_v1",
+  "created_from": "Final Weeks 3-6 internship outputs supplied by the analyst.",
+  "public_safe": true,
+  "data_note": "All telemetry and operational examples are synthetic. No real InGen customer, fleet, patient, student, or security data is included.",
+  "files": [
+    {
+      "file": "anomaly_metrics_per_split.csv",
+      "rows": 240,
+      "columns": 9,
+      "sha256": "d7cd0bbff27e07f665a00f4e6c66eeea11daa4bb770f66a3cb9cb5477364ef23",
+      "description": "Week 4 precision, recall, F1, and AUROC across ten seeded splits."
+    },
+    {
+      "file": "anomaly_metrics_summary.csv",
+      "rows": 24,
+      "columns": 12,
+      "sha256": "d51693bf05c8cbc195cd7cf2aacc1e85ac858541ff4c30d3d67dfc351fbb3ae5",
+      "description": "Week 4 mean and standard deviation metrics by detector and fault scope."
+    },
+    {
+      "file": "anomaly_wilcoxon_auroc.csv",
+      "rows": 36,
+      "columns": 7,
+      "sha256": "72175937ec7503d4442cb4270af10f210553c84a730c03516bf98ebc053479c7",
+      "description": "Week 4 pairwise Wilcoxon AUROC comparisons."
+    },
+    {
+      "file": "decision_domain_summary.csv",
+      "rows": 4,
+      "columns": 5,
+      "sha256": "17b8f6c97c60057f5bb6fee0bbaff6d4dfd5440d4a47766adb270b08fa64b84d",
+      "description": "Week 6 rule accuracy and ordinal judge score by product domain."
+    },
+    {
+      "file": "decision_error_analysis.csv",
+      "rows": 7,
+      "columns": 16,
+      "sha256": "50d2a3da77b3fa91f0bebf2ea14bfb294cf4ebcbbd23284e7d6ab53f8a4bfb35",
+      "description": "Week 6 seven rule-controller mismatches."
+    },
+    {
+      "file": "decision_judgments.csv",
+      "rows": 150,
+      "columns": 18,
+      "sha256": "9bf2a4359a93569e889adf16167e8007a90be5a9f58b9b6b926b6c1204802ec3",
+      "description": "Week 6 150 seeded FLAN-T5-base judgments."
+    },
+    {
+      "file": "decision_pairwise_kappa.csv",
+      "rows": 3,
+      "columns": 4,
+      "sha256": "23e429672e3447dc0cc11455ad74b5cf21d192462c7757bee55fc97e556d0ec2",
+      "description": "Week 6 pairwise Cohen kappa across judge seeds."
+    },
+    {
+      "file": "decision_reliability_summary.csv",
+      "rows": 5,
+      "columns": 9,
+      "sha256": "494c85b99ae8946e54f1fb8b5831e7a2308dbf83352852492a35a952fea287f8",
+      "description": "Week 6 overall and domain-level Krippendorff alpha."
+    },
+    {
+      "file": "decision_rule_predictions.csv",
+      "rows": 50,
+      "columns": 12,
+      "sha256": "db51c5549f93d999308fee8c8c8bf8751fd55881c1c95c7f6a1e2fb31f0c3174",
+      "description": "Week 6 deterministic rule-controller predictions."
+    },
+    {
+      "file": "decision_scenario_results.csv",
+      "rows": 50,
+      "columns": 16,
+      "sha256": "1cb98e3f0d56e470739574d008e541dfb7655f2df8de1ae6e2f8325744fd7055",
+      "description": "Week 6 scenario-level target, candidate, rule, and majority-judge results."
+    },
+    {
+      "file": "fleet_alert_history.csv",
+      "rows": 150,
+      "columns": 10,
+      "sha256": "ae746622aa1801b8bf7548053a053c2b6c356562fd3f1a635e40be610b6d6e18",
+      "description": "Week 4 synthetic fault events converted into a dashboard alert timeline."
+    },
+    {
+      "file": "fleet_telemetry_5min.csv",
+      "rows": 1440,
+      "columns": 17,
+      "sha256": "47be96b19ed88eb272b77c63c1e9a3c00a2ef39a916011f614ad57b79ed1795b",
+      "description": "Five-minute sample of the Week 3 five-unit, one-day synthetic telemetry run."
+    },
+    {
+      "file": "fleet_unit_status.csv",
+      "rows": 5,
+      "columns": 14,
+      "sha256": "8405ff879abbe5e515a02ed21a88817e72bf86a69435ba74b3cbb0e03b43083e",
+      "description": "Synthetic current-state snapshot combining Week 3 telemetry and Week 4 fault examples."
+    },
+    {
+      "file": "rl_learning_curves.csv",
+      "rows": 310,
+      "columns": 14,
+      "sha256": "2b8ec254bd2fe0a783c52b2d1b0818ea278e52512ef7103552523936b30680c3",
+      "description": "Week 5 single-agent evaluation histories combined across environments, algorithms, and seeds."
+    },
+    {
+      "file": "rl_multi_agent_diagnostics.csv",
+      "rows": 2,
+      "columns": 19,
+      "sha256": "2fde3c6f8eb9f2cceb1d70bcec2dc7eb9b470f204ab322cf17f92254a234da11",
+      "description": "Week 5 PPO versus random multi-agent diagnostics."
+    },
+    {
+      "file": "rl_multi_agent_diagnostics_by_seed.csv",
+      "rows": 10,
+      "columns": 19,
+      "sha256": "b54c361dde3e44b888744ffa9c0c94ba0d497969e02cab480db1cdbd3b6cd493",
+      "description": "Week 5 multi-agent diagnostics by seed and policy."
+    },
+    {
+      "file": "rl_multi_agent_paired_deltas.csv",
+      "rows": 5,
+      "columns": 7,
+      "sha256": "d872b56a9648c1bddf78e86ad93a1d71631656c9a819c114242f8d11202de7c4",
+      "description": "Week 5 paired PPO-minus-random diagnostic deltas."
+    },
+    {
+      "file": "rl_multi_agent_seed_results.csv",
+      "rows": 5,
+      "columns": 61,
+      "sha256": "f206a20f45e909d8c1c26aff901541b28417047bf6b100a6fce0bdee18927439",
+      "description": "Week 5 multi-agent PPO results by training seed."
+    },
+    {
+      "file": "rl_multi_agent_summary.csv",
+      "rows": 1,
+      "columns": 16,
+      "sha256": "293a9305f2338f9d591eb0c5f51e2801730565971015afa3dac7b4658e4cead8",
+      "description": "Week 5 multi-agent PPO aggregate summary."
+    },
+    {
+      "file": "rl_sample_efficiency.csv",
+      "rows": 20,
+      "columns": 11,
+      "sha256": "4fc7f022cc4587a5841a6146b28a382ca2e2f532377ab0face03ae2935482440",
+      "description": "Week 5 budget checkpoints and threshold-reaching results by seed."
+    },
+    {
+      "file": "rl_single_agent_seed_results.csv",
+      "rows": 20,
+      "columns": 55,
+      "sha256": "a9fe908b0d82251e9f9b317d29baf7ea4f364a583a4c2dfe96cee998da3e0780",
+      "description": "Week 5 single-agent results by seed."
+    },
+    {
+      "file": "rl_single_agent_summary.csv",
+      "rows": 4,
+      "columns": 16,
+      "sha256": "6c958a40cb20be8b348db10a343878d6ab84a79b0411620e3807592c028dadb3",
+      "description": "Week 5 PPO and SAC aggregate results for two continuous-control environments."
+    },
+    {
+      "file": "rl_wallclock.csv",
+      "rows": 20,
+      "columns": 7,
+      "sha256": "b756079457a338efab9c3848c15aec67cd52ec5506c09806478df8b6bbe56172",
+      "description": "Week 5 wall-clock runtime and throughput results."
+    }
+  ]
+}

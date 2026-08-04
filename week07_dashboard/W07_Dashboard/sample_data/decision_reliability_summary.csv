@@ -1,0 +1,6 @@
+scope,domain,n_scenarios,n_valid_judgments,parse_rate,complete_scenario_count,exact_three_run_agreement,krippendorff_alpha_nominal,interpretation
+overall,all,50,150,1.0,50,0.78,0.7250461331991276,tentative agreement; useful with review
+domain,aido_rover,15,45,1.0,15,0.9333333333333332,0.9051724137931034,strong agreement for this test bank
+domain,fari,10,30,1.0,10,0.7,0.6266094420600858,limited agreement; unsuitable as a sole scorer
+domain,senpai,10,30,1.0,10,0.6,0.366120218579235,poor agreement; unreliable for automated use
+domain,sentinel_prime,15,45,1.0,15,0.8,0.748091603053435,tentative agreement; useful with review

@@ -1,0 +1,4 @@
+judge_seed_a,judge_seed_b,n_common_scenarios,cohen_kappa
+7,17,50,0.6209249431387416
+7,27,50,0.7299382716049383
+17,27,50,0.8165810711665444

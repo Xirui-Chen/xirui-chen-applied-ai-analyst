@@ -1,0 +1,21 @@
+{
+  "artifact": "W07_Dashboard",
+  "app_entrypoint": "app.py",
+  "one_command_launch": "./launch_dashboard.sh",
+  "python_target": "3.11",
+  "personas": [
+    "Engineering Manager",
+    "Product Manager",
+    "Customer Success"
+  ],
+  "views": [
+    "Fleet Health",
+    "Policy Benchmark",
+    "Decision Evaluation"
+  ],
+  "sample_data_files": 23,
+  "fleet_units": 5,
+  "decision_scenarios": 50,
+  "seeded_judgments": 150,
+  "public_safe": true
+}
