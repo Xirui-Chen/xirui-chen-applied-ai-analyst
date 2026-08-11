@@ -1,6 +1,6 @@
 # W08 LSTM Battery Degradation Follow-Up
 
-This folder addresses the supervisor request to analyze the LSTM Autoencoder on `accelerated_battery_degradation` before the capstone is finalized.
+This folder analyzes the LSTM Autoencoder on `accelerated_battery_degradation` before the capstone is finalized.
 
 ## Bottom line
 
@@ -14,19 +14,10 @@ The follow-up shows that:
 - a battery-focused reconstruction score improves AUROC to **0.670 ± 0.093**, but still trails LOF and One-Class SVM
 - the Week 4 recommendation therefore remains unchanged: **LOF is the preferred accuracy-maximizing detector**
 
-## Recommended repository location
-
-Place the contents of this folder under:
-
-```text
-week08_capstone/
-└── supporting_analysis/
-```
-
 ## Files
 
 ```text
-supporting_analysis/
+W08_LSTM_Battery_Degradation_Followup/
 ├── W08_LSTM_Battery_Degradation_Analysis.md
 ├── W08_LSTM_Battery_Degradation_Analysis.ipynb
 ├── analysis_driver.py
@@ -41,12 +32,10 @@ The Markdown report is the supervisor-facing artifact. The notebook, result tabl
 
 ## Reproduce the analysis
 
-From `week08_capstone/supporting_analysis/`:
+From `week08_capstone/W08_LSTM_Battery_Degradation_Followup/`:
 
 ```bash
 ./run_followup.sh
 ```
 
 The runner assumes the repository contains the final Week 4 notebook/results and the Week 3 five-unit telemetry sample. It reuses the exact Week 4 implementation cells for fault injection, feature engineering, and the LSTM Autoencoder.
-
-No production or confidential data is included.
