@@ -1,0 +1,4 @@
+scope,method_a,method_b,mean_auroc_diff_a_minus_b,wilcoxon_statistic,p_value_two_sided,n_pairs
+accelerated_battery_degradation,Isolation Forest,LSTM Autoencoder,0.1970329488745534,0.0,0.001953125,10
+accelerated_battery_degradation,LOF,LSTM Autoencoder,0.415340911740234,0.0,0.001953125,10
+accelerated_battery_degradation,LSTM Autoencoder,One-Class SVM,-0.4126064724474538,0.0,0.001953125,10

@@ -1,0 +1,2 @@
+score_definition,auroc_mean,auroc_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std,clean_flag_rate_mean,clean_flag_rate_std
+"Mean reconstruction MSE over battery_soc_pct__mean, battery_voltage_v__mean, battery_voltage_soc_residual, battery_soc_interunit_z",0.6697622325599125,0.09332565237547504,0.022980701469073564,0.05188395863839903,0.04624364882429398,0.08503904772833354,0.02935324443307885,0.06181003478362542,0.044481554641022616,0.034995547792223754

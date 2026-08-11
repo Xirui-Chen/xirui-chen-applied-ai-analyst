@@ -1,0 +1,18 @@
+{
+  "artifact": "W08_LSTM_Battery_Degradation_Followup",
+  "supervisor_request": "Analyze the LSTM Autoencoder's performance on accelerated_battery_degradation before finalizing the capstone.",
+  "primary_report": "W08_LSTM_Battery_Degradation_Analysis.md",
+  "reproducible_runner": "run_followup.sh",
+  "source_basis": [
+    "Week 3 five-unit one-day synthetic Rover telemetry",
+    "Final Week 4 anomaly benchmark outputs and notebook"
+  ],
+  "key_result": {
+    "lstm_auroc_mean": 0.5662776241625542,
+    "lstm_auroc_std": 0.1284070189933877,
+    "events_detected": 1,
+    "events_total": 30
+  },
+  "recommendation": "Retain LOF as the primary accuracy-maximizing detector; do not promote the current LSTM Autoencoder for accelerated battery degradation.",
+  "public_safe": true
+}

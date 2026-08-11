@@ -1,0 +1,47 @@
+{
+  "original_lstm": {
+    "auroc_mean": 0.5662776241625542,
+    "auroc_std": 0.1284070189933877,
+    "precision_mean": 0.0015625,
+    "precision_std": 0.004941058844013,
+    "recall_mean": 0.0051282051282051,
+    "recall_std": 0.0162168085136839,
+    "f1_mean": 0.0023952095808383,
+    "f1_std": 0.0075743177489062,
+    "zero_recall_splits": 9
+  },
+  "event_level": {
+    "detected": 1,
+    "total": 30
+  },
+  "comparators": {
+    "lof_auroc_mean": 0.9816185359027882,
+    "ocsvm_auroc_mean": 0.9788840966100082,
+    "isolation_forest_auroc_mean": 0.7633105730371077
+  },
+  "focused_score": {
+    "auroc_mean": 0.6697622325599125,
+    "auroc_std": 0.09332565237547504,
+    "recall_mean": 0.04624364882429398,
+    "f1_mean": 0.02935324443307885
+  },
+  "battery_voltage_soc_residual": {
+    "reconstruction_error_auroc_mean": 0.7832723784115947,
+    "reconstruction_error_auroc_std": 0.10337398227657794
+  },
+  "duration": {
+    "events": 30,
+    "mean_duration_s": 618.4666666666667,
+    "median_duration_s": 658.5,
+    "min_duration_s": 275,
+    "max_duration_s": 898,
+    "events_shorter_than_8min": 10,
+    "mean_severity": 0.7905144963092537
+  },
+  "reproduction_max_abs_diff": {
+    "precision": 0.0,
+    "recall": 8.326672684688674e-17,
+    "f1": 3.469446951953614e-17,
+    "auroc": 5.551115123125783e-17
+  }
+}

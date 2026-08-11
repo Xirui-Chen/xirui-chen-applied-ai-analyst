@@ -1,0 +1,9 @@
+# Uses the same core stack as the Week 4 anomaly benchmark.
+numpy
+pandas
+scikit-learn
+scipy
+torch
+matplotlib
+jupyter
+nbconvert
