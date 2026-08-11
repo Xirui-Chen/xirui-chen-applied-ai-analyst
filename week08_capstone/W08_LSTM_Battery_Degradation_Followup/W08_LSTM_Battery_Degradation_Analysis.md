@@ -1,8 +1,6 @@
 # LSTM Autoencoder Follow-Up: Accelerated Battery Degradation
 
 **Week 8 Capstone Supporting Analysis**  
-**Author:** Xirui (Crissy) Chen, Applied AI Analyst Intern  
-**Supervisor follow-up:** “Please analyze the LSTM Autoencoder's performance on the `accelerated_battery_degradation` fault before finalizing the capstone.”
 
 ## Executive Conclusion
 
@@ -219,13 +217,8 @@ Keep the Week 4 recommendation unchanged:
 
 For accelerated battery degradation specifically, LOF and One-Class SVM are substantially stronger than the configured LSTM Autoencoder.
 
-### 9.2 What the capstone should say about the LSTM
 
-A concise and accurate statement is:
-
-> The LSTM Autoencoder was not competitive on accelerated battery degradation under the current one-day, eight-minute-sequence benchmark. Follow-up diagnostics showed that looser thresholds and additional training epochs did not resolve the issue. Battery-specific reconstruction channels carried more signal than the global multivariate score, suggesting that future sequence-based battery monitoring should use battery-weighted scoring and longer-horizon battery-health features rather than the current equal-weight reconstruction MSE.
-
-### 9.3 Best next experiment
+### 9.2 Best next experiment
 
 If this line of work is continued, the next experiment should test:
 
@@ -251,10 +244,6 @@ The targeted analysis shows that:
 - battery-specific reconstruction channels do contain useful signal
 - equal-weight global reconstruction error dilutes that signal
 - a redesigned battery-specific sequence model remains a future research path, not a current recommendation
-
-For the executive deck, the most compact callout is:
-
-> **Battery follow-up:** the current LSTM AE remains unsuitable for accelerated battery degradation (AUROC **0.566 ± 0.128**). LOF remains the recommended default. Battery-focused reconstruction improved LSTM ranking, but remained well below the classical detectors.
 
 ---
 
